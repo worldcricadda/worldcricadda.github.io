@@ -1,49 +1,61 @@
-/* ===== Global ===== */
+/* ===== RESET & GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f2f2f2;
+  background: #f2f4f8;
   color: #222;
+  line-height: 1.6;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
 header {
   background: #0b3d91;
-  color: white;
-  padding: 15px;
+  color: #ffffff;
   text-align: center;
+  padding: 15px 10px;
 }
 
 header img {
   display: block;
-  margin: 0 auto 5px;
+  margin: 0 auto 6px;
 }
 
 header h1 {
-  margin: 5px 0;
-  font-size: 24px;
+  margin: 5px 0 2px;
+  font-size: 26px;
 }
 
-/* ===== Navigation ===== */
+header .tagline {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== NAVIGATION ===== */
 nav {
   margin-top: 10px;
 }
 
 nav a {
-  color: white;
+  display: inline-block;
+  margin: 5px 10px;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 10px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Sections ===== */
+/* ===== SECTIONS ===== */
 section {
-  background: white;
+  background: #ffffff;
   margin: 15px;
   padding: 15px;
   border-radius: 8px;
@@ -52,25 +64,60 @@ section {
 section h2 {
   margin-top: 0;
   color: #0b3d91;
+  font-size: 20px;
 }
 
-/* ===== Footer ===== */
+/* ===== LISTS ===== */
+ul {
+  padding-left: 18px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/* ===== LINKS INSIDE CONTENT ===== */
+section a {
+  color: #0b3d91;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
 footer {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 12px;
   font-size: 14px;
+  margin-top: 20px;
 }
 
-/* ===== Mobile Responsive ===== */
+/* ===== RESPONSIVE (MOBILE FIRST) ===== */
 @media (max-width: 600px) {
-  nav a {
-    display: inline-block;
-    margin: 5px;
+  header h1 {
+    font-size: 22px;
   }
 
-  header h1 {
-    font-size: 20px;
+  nav a {
+    margin: 5px;
+    font-size: 13px;
+  }
+
+  section {
+    margin: 10px;
+    padding: 12px;
+  }
+}
+
+/* ===== RESPONSIVE (DESKTOP ENHANCEMENT) ===== */
+@media (min-width: 900px) {
+  section {
+    max-width: 900px;
+    margin: 20px auto;
   }
 }
