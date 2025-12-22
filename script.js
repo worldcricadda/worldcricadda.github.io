@@ -1,15 +1,16 @@
-// CricScoreLive JavaScript File
+document.addEventListener("DOMContentLoaded", () => {
+  const box = document.getElementById("scoreBox");
 
-console.log("CricScoreLive website loaded successfully");
+  // DEMO DATA (replace with real API later)
+  const demoData = [
+    { match: "India vs Australia", score: "185/4 (18.2 overs)" },
+    { match: "England vs South Africa", score: "142/6 (17.0 overs)" }
+  ];
 
-// Demo live score (testing purpose)
-document.addEventListener("DOMContentLoaded", function () {
-  const liveSection = document.querySelector("section");
-  
-  if (liveSection) {
-    const demoScore = document.createElement("p");
-    demoScore.innerHTML = "🏏 India vs Australia<br>Score: 185/4 (18.2 overs)";
-    demoScore.style.fontWeight = "bold";
-    liveSection.appendChild(demoScore);
-  }
+  let html = "";
+  demoData.forEach(m => {
+    html += `<p><strong>${m.match}</strong><br>${m.score}</p>`;
+  });
+
+  box.innerHTML = html;
 });
