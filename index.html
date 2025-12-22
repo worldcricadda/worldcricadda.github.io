@@ -2,38 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CricScoreLive – Live Cricket Scores</title>
+
+  <title>WorldCricAdda – Live Cricket & Sports Updates</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CricScoreLive provides live cricket scores, IPL updates, schedules, results and cricket news in Hindi and English.">
+
+  <meta name="description" content="WorldCricAdda provides live cricket scores, IPL updates, international match news, schedules, results and other sports updates in a fast and mobile-friendly way.">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- ===== HEADER ===== -->
   <header>
-    <img src="logo.png" alt="CricScoreLive Logo" width="90">
-    <h1>CricScoreLive</h1>
+    <img src="logo.png" alt="WorldCricAdda Logo" width="90">
+
+    <h1>WorldCricAdda</h1>
+    <p class="tagline">Live Cricket & Sports Updates</p>
+
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Live Score</a>
-      <a href="#">IPL</a>
-      <a href="#">News</a>
+      <a href="index.html">Home</a>
+      <a href="#live">Live Score</a>
+      <a href="ipl.html">IPL</a>
+      <a href="othersports.html">Other Sports</a>
+      <a href="#news">News</a>
     </nav>
   </header>
 
-  <section>
+  <!-- ===== LIVE SCORE SECTION ===== -->
+  <section id="live">
     <h2>🏏 Live Cricket Scores</h2>
     <p>Live matches and scores will appear here.</p>
+    <p><strong>India vs Australia</strong> – 185/4 (18.2 overs)</p>
   </section>
 
+  <!-- ===== UPCOMING MATCHES ===== -->
   <section>
-    <h2>📰 Latest Cricket News</h2>
-    <p>Get latest IPL and international cricket updates.</p>
+    <h2>📅 Upcoming Matches</h2>
+    <ul>
+      <li>India vs England – Tomorrow</li>
+      <li>Pakistan vs South Africa – Friday</li>
+      <li>IPL: CSK vs MI – This Weekend</li>
+    </ul>
   </section>
 
+  <!-- ===== OTHER SPORTS PREVIEW ===== -->
+  <section>
+    <h2>⚽ Other Sports</h2>
+    <ul>
+      <li>Football – International match updates</li>
+      <li>Badminton – World tour news</li>
+      <li>Hockey – Tournament updates</li>
+      <li>Basketball – Global league news</li>
+    </ul>
+    <p>
+      <a href="othersports.html">View all other sports →</a>
+    </p>
+  </section>
+
+  <!-- ===== NEWS SECTION ===== -->
+  <section id="news">
+    <h2>📰 Latest Sports News</h2>
+    <p>
+      Get the latest updates from IPL, international cricket and other sports
+      from around the world only on WorldCricAdda.
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 CricScoreLive | All Rights Reserved</p>
+    <p>© 2025 WorldCricAdda | Live Cricket & Sports Updates</p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
