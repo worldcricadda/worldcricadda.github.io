@@ -1,71 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WorldCricAdda – Live Cricket Scores</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorldCricAdda - Live Cricket & Sports Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d04d6d30.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #d32f2f;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      color: white !important;
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1505236731314-0f6c60b0d8d3?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    /* Section Headings */
+    h2.section-title {
+      border-left: 5px solid #d32f2f;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* Gallery */
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #212121;
+      color: white;
+      padding: 30px 0;
+    }
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-
-<header class="header">
-  <div class="logo">🏏 WorldCricAdda</div>
-  <nav>
-    <a href="#">Live Scores</a>
-    <a href="#">Schedule</a>
-    <a href="#">News</a>
-    <a href="#">Series</a>
-    <a href="#">Rankings</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">WorldCricAdda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#live">Live Scores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fixtures">Fixtures</a></li>
+          <li class="nav-item"><a class="nav-link" href="#analysis">Analysis</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
 
-<section class="live-score-bar">
-  <div class="score-card">IND 180/4 (42 ov)</div>
-  <div class="score-card">PAK 120/7 (35 ov)</div>
-  <div class="score-card">AUS 250/6 (50 ov)</div>
-</section>
-
-<section class="hero">
-  <h1>Experience Cricket Like Never Before</h1>
-  <p>Live Scores • News • Fantasy Tips</p>
-</section>
-
-<section class="news">
-  <h2>News & Featured Articles</h2>
-
-  <div class="news-grid">
-    <div class="news-card">
-      <img src="https://i.imgur.com/8Q1ZQZK.jpg">
-      <h3>Kohli’s Century Seals Victory</h3>
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div>
+      <h1>Welcome to WorldCricAdda</h1>
+      <p>Live Scores • Fixtures • Player Stats • Sports News</p>
     </div>
+  </section>
 
-    <div class="news-card">
-      <img src="https://i.imgur.com/zYxDCQT.jpg">
-      <h3>Bumrah: Most Lethal Bowler</h3>
-    </div>
+  <div class="container mt-5">
 
-    <div class="news-card">
-      <img src="https://i.imgur.com/0jZ8YQX.jpg">
-      <h3>IPL Auction Big Surprises</h3>
-    </div>
+    <!-- Live Score Section -->
+    <section id="live" class="my-5">
+      <h2 class="section-title">Live Score</h2>
+      <div class="text-center p-4 bg-light rounded shadow">
+        <p>⚡ Live Match: India vs Australia - 4th T20</p>
+        <p>Score: IND 176/4 (18.2 overs)</p>
+        <a href="#" class="btn btn-danger btn-sm">View Full Scorecard</a>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="my-5">
+      <h2 class="section-title">Sports News</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">India Clinches Series Win</h5>
+              <p class="card-text">India defeats Australia by 2 wickets in a thrilling match.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1590602847861-7c1de30d8b52?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Top 10 IPL Performers</h5>
+              <p class="card-text">Check out who dominated IPL 2025 with both bat and ball.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1614331641883-d4d67cb784d0?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Global Sports Roundup</h5>
+              <p class="card-text">Latest news from football, basketball, and more sports.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="my-5">
+      <h2 class="section-title">Photo Gallery</h2>
+      <div class="row gallery">
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,stadium" alt=""></div>
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,bat" alt=""></div>
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,ball" alt=""></div>
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?sports,team" alt=""></div>
+      </div>
+    </section>
+
+    <!-- Fixtures & Player Info Section -->
+    <section id="fixtures" class="my-5">
+      <h2 class="section-title">Fixtures & Player Info</h2>
+      <ul class="list-group">
+        <li class="list-group-item">🏏 India vs South Africa - Dec 25, Mumbai</li>
+        <li class="list-group-item">🏏 Australia vs England - Dec 27, Sydney</li>
+        <li class="list-group-item">🏏 Pakistan vs New Zealand - Dec 28, Karachi</li>
+      </ul>
+      <a href="#" class="btn btn-danger btn-sm mt-3">View Player Stats</a>
+    </section>
+
+    <!-- Data Analysis Section -->
+    <section id="analysis" class="my-5">
+      <h2 class="section-title">Data Analysis</h2>
+      <div class="p-4 bg-light rounded shadow">
+        <p>🏆 Team India Win %: <strong>68%</strong></p>
+        <p>🔥 Top Batsman: <strong>Virat Kohli</strong> - Avg 57.3</p>
+        <p>💥 Top Bowler: <strong>Jasprit Bumrah</strong> - Economy 5.6</p>
+      </div>
+    </section>
+
+    <!-- Feedback & Newsletter -->
+    <section id="contact" class="my-5">
+      <h2 class="section-title">Feedback & Newsletter</h2>
+      <form class="shadow p-4 bg-light rounded">
+        <div class="mb-3">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Your Feedback</label>
+          <textarea class="form-control" rows="3" placeholder="Write your feedback"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Subscribe for News Updates</label>
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Submit</button>
+      </form>
+    </section>
+
+    <!-- Ads Section -->
+    <section id="ads" class="my-5">
+      <h2 class="section-title">Sponsored Ads</h2>
+      <div class="text-center bg-warning p-4 rounded">
+        <p>Advertisement Space</p>
+        <p>Contact us to place your ad here!</p>
+      </div>
+    </section>
+
   </div>
-</section><section class="gallery">
-  <h2>Cricket Photo Gallery</h2>
 
-  <div class="gallery-grid">
-    <img src="https://i.imgur.com/1.jpg" alt="Cricket Match">
-    <img src="https://i.imgur.com/2.jpg" alt="Cricket Stadium">
-    <img src="https://i.imgur.com/3.jpg" alt="Cricket Player">
-    <img src="https://i.imgur.com/4.jpg" alt="IPL Match">
-    <img src="https://i.imgur.com/5.jpg" alt="Cricket Crowd">
-    <img src="https://i.imgur.com/6.jpg" alt="Winning Moment">
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <p>&copy; 2025 WorldCricAdda | Designed for Cricket Lovers 🏏</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
 
-<footer>
-  © 2025 WorldCricAdda | All Rights Reserved
-</footer>
-
-<script src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
