@@ -1,96 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WorldCricAdda - Live Cricket & Sports Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorldCricAdda - Cricket & Sports Hub</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2d04d6d30.js" crossorigin="anonymous"></script>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: #d32f2f;
-    }
-    .navbar-brand {
-      font-weight: 700;
-      color: white !important;
-      font-size: 1.5rem;
-    }
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
-    }
-    .nav-link:hover {
-      color: #ffc107 !important;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1505236731314-0f6c60b0d8d3?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      color: white;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    /* Section Headings */
-    h2.section-title {
-      border-left: 5px solid #d32f2f;
-      padding-left: 10px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    /* Gallery */
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-      background-color: #212121;
-      color: white;
-      padding: 30px 0;
-    }
-    footer a {
-      color: #ffc107;
-      text-decoration: none;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<script src="script.js"></script><body>
-  <!-- Navbar -->
+<body>
+  <!-- 🔝 Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">WorldCricAdda</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#live">Live Scores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#live">Live</a></li>
           <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#fixtures">Fixtures</a></li>
@@ -101,86 +39,54 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero text-center">
+  <!-- 🏏 Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center text-white">
     <div>
       <h1>Welcome to WorldCricAdda</h1>
-      <p>Live Scores • Fixtures • Player Stats • Sports News</p>
+      <p>Live Scores • Fixtures • Player Info • Sports News</p>
     </div>
   </section>
 
   <div class="container mt-5">
 
-    <!-- Live Score Section -->
+    <!-- 🟢 Live Score -->
     <section id="live" class="my-5">
       <h2 class="section-title">Live Score</h2>
-      <div class="text-center p-4 bg-light rounded shadow">
-        <p>⚡ Live Match: India vs Australia - 4th T20</p>
+      <div class="text-center bg-light p-4 rounded shadow">
+        <p>⚡ India vs Australia - 4th T20</p>
         <p>Score: IND 176/4 (18.2 overs)</p>
-        <a href="#" class="btn btn-danger btn-sm">View Full Scorecard</a>
-      </div>
-    </section>
-<p id="datetime" class="text-muted"></p>
-    <!-- News Section -->
-    <section id="news" class="my-5">
-      <h2 class="section-title">Sports News</h2>
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">India Clinches Series Win</h5>
-              <p class="card-text">India defeats Australia by 2 wickets in a thrilling match.</p>
-              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1590602847861-7c1de30d8b52?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Top 10 IPL Performers</h5>
-              <p class="card-text">Check out who dominated IPL 2025 with both bat and ball.</p>
-              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1614331641883-d4d67cb784d0?auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Global Sports Roundup</h5>
-              <p class="card-text">Latest news from football, basketball, and more sports.</p>
-              <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
-            </div>
-          </div>
-        </div>
+        <p id="datetime" class="text-muted"></p>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- 📰 News Section -->
+    <section id="news" class="my-5">
+      <h2 class="section-title">Latest Sports News</h2>
+      <div id="dynamicNews" class="row"></div>
+    </section>
+
+    <!-- 📸 Gallery -->
     <section id="gallery" class="my-5">
       <h2 class="section-title">Photo Gallery</h2>
       <div class="row gallery">
-        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,stadium" alt=""></div>
         <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,bat" alt=""></div>
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,stadium" alt=""></div>
         <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?cricket,ball" alt=""></div>
-        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?sports,team" alt=""></div>
+        <div class="col-md-3 col-6 mb-3"><img src="https://source.unsplash.com/400x300/?sports,player" alt=""></div>
       </div>
     </section>
 
-    <!-- Fixtures & Player Info Section -->
+    <!-- 🗓 Fixtures -->
     <section id="fixtures" class="my-5">
-      <h2 class="section-title">Fixtures & Player Info</h2>
+      <h2 class="section-title">Upcoming Fixtures</h2>
       <ul class="list-group">
         <li class="list-group-item">🏏 India vs South Africa - Dec 25, Mumbai</li>
-        <li class="list-group-item">🏏 Australia vs England - Dec 27, Sydney</li>
-        <li class="list-group-item">🏏 Pakistan vs New Zealand - Dec 28, Karachi</li>
+        <li class="list-group-item">🏏 England vs Australia - Dec 27, Sydney</li>
+        <li class="list-group-item">🏏 Pakistan vs New Zealand - Dec 29, Karachi</li>
       </ul>
-      <a href="#" class="btn btn-danger btn-sm mt-3">View Player Stats</a>
     </section>
 
-    <!-- Data Analysis Section -->
+    <!-- 📊 Analysis -->
     <section id="analysis" class="my-5">
       <h2 class="section-title">Data Analysis</h2>
       <div class="p-4 bg-light rounded shadow">
@@ -190,7 +96,7 @@
       </div>
     </section>
 
-    <!-- Feedback & Newsletter -->
+    <!-- 💬 Feedback -->
     <section id="contact" class="my-5">
       <h2 class="section-title">Feedback & Newsletter</h2>
       <form class="shadow p-4 bg-light rounded">
@@ -199,35 +105,33 @@
           <input type="text" class="form-control" placeholder="Enter your name">
         </div>
         <div class="mb-3">
-          <label class="form-label">Your Feedback</label>
+          <label class="form-label">Feedback</label>
           <textarea class="form-control" rows="3" placeholder="Write your feedback"></textarea>
         </div>
         <div class="mb-3">
-          <label class="form-label">Subscribe for News Updates</label>
+          <label class="form-label">Email</label>
           <input type="email" class="form-control" placeholder="Enter your email">
         </div>
         <button type="submit" class="btn btn-danger w-100">Submit</button>
       </form>
     </section>
 
-    <!-- Ads Section -->
+    <!-- 💰 Ads -->
     <section id="ads" class="my-5">
       <h2 class="section-title">Sponsored Ads</h2>
-      <div class="text-center bg-warning p-4 rounded">
-        <p>Advertisement Space</p>
-        <p>Contact us to place your ad here!</p>
+      <div class="text-center bg-warning p-4 rounded shadow">
+        <p>Advertisement Space — Contact us to display your ad here!</p>
       </div>
     </section>
-
   </div>
 
-  <!-- Footer -->
-  <footer class="text-center mt-5">
-    <p>&copy; 2025 WorldCricAdda | Designed for Cricket Lovers 🏏</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  <!-- 🦶 Footer -->
+  <footer class="text-center py-3">
+    <p>&copy; 2025 WorldCricAdda | Made for Cricket Lovers 🏏</p>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
