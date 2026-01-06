@@ -1,74 +1,79 @@
-/* =============================
-   WorldCricAdda Style Sheet
-   ============================= */
+:root {
+    --primary: #1a1a2e;
+    --secondary: #e94560;
+    --accent: #f0a500;
+    --text: #ffffff;
+    --bg-light: #16213e;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-/* 🔝 Navbar */
-.navbar {
-  background-color: #d32f2f;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-.navbar-brand { font-weight: 700; color: white !important; font-size: 1.5rem; }
-.nav-link { color: white !important; font-weight: 500; transition: color 0.3s; }
-.nav-link:hover { color: #ffc107 !important; }
-
-/* 🏏 Hero Section */
-.hero {
-  height: 400px;
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1505236731314-0f6c60b0d8d3?auto=format&fit=crop&w=1350&q=80')
-    center/cover no-repeat;
-}
-.hero h1 { font-size: 2.5rem; font-weight: 700; }
-.hero p { font-size: 1.2rem; }
-
-/* 📌 Section Titles */
-.section-title {
-  border-left: 5px solid #d32f2f;
-  padding-left: 10px;
-  margin-bottom: 25px;
-  font-weight: 600;
+header {
+    background: var(--bg-light);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* 📰 News Cards */
-.card {
-  border: none;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+.logo { font-size: 1.8rem; font-weight: bold; }
+.logo span { color: var(--accent); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: 500; }
+
+.section { padding: 40px 5%; }
+.section-title { border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 25px; }
+
+/* Score Grid */
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-/* 📸 Gallery */
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
+.score-card {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--accent);
 }
 
-/* 🦶 Footer */
-footer {
-  background: #212121;
-  color: white;
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.gallery-grid img { width: 100%; border-radius: 8px; transition: 0.3s; }
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* Responsive Ads */
+.ad-banner {
+    background: #333;
+    height: 90px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    color: #888;
 }
 
-/* 📱 Responsive Design */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-  .hero { height: 300px; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-}
-.loading {
-  color: gray;
-  font-style: italic;
+    header { flex-direction: column; }
+    nav ul { padding: 10px 0; }
+    nav ul li { margin: 0 10px; }
 }
